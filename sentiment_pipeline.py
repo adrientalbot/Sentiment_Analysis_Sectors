@@ -181,7 +181,7 @@ def visualisation_polarity_each_buzzword(polarity_buzzwords, buzzwords):
 
                       )
 
-    return fig.show()
+    return fig
 
 # the following returns news urls with lowest polarity score given a specific buzzword/sector:
 def extract_news_low_polarity(number_news, string_buzzword, secret_api):
@@ -309,7 +309,7 @@ def polarity_time_series_visualisation(buzzwords, duration_days, secret_api):
         y=daily_news_polarity_scores_past_month(duration_days, buzzwords[x], secret_api)
         , mode='lines', name=F" {buzzword_name} sector "))
     fig.update_layout(template='simple_white', title_text="News Polarity Per Sector/Buzzword")
-    return fig.show()
+    return fig
 
 
 
